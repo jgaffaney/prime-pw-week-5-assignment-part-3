@@ -16,8 +16,14 @@ function addToCollection (title, artist, yearPublished) {
   return album;
 
 }//end addToCollection
+
+//Testing - Adding multiple album and then loggin the collection
 addToCollection('The Eternol Idol', 'Black Sabbath', '1987');
 addToCollection('Past Lives', 'Black Sabbath', '2002');
+addToCollection('Songs About Jane', 'Maroon 5', '2002');
+addToCollection('Abbey Road', 'The Beatles', '1969');
+addToCollection('Nevermond', 'Nirvana', '1969');
+addToCollection(`Sgt. Pepper's Lonely Hearts Club Band`, 'The Beatles', '1967');
 console.log(collection);
 
 //a function to take any array and first show the number of items in the array
@@ -31,4 +37,23 @@ function showCollection(array) {
   return true;
 }//end showCollection
 
+//TESTING
+console.log('TEST to show the collection');
 console.log(showCollection(collection));
+
+// a function to loop through the collection and find all albums with a given
+// artist.  The function will place all albums with that artist into a new array
+// and return the array
+
+function findByArtist(artist) {
+  let artistCollection = [];
+  for(let album of collection) {
+    if(album.artist === artist) {
+      artistCollection.push(album)
+    }//end if
+  }//End For
+  return artistCollection;
+}//End findByArtist
+
+//Testing findByArtist
+console.log(findByArtist('The Beatles'));
