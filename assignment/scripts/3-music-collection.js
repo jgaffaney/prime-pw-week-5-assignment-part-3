@@ -22,7 +22,7 @@ addToCollection('The Eternol Idol', 'Black Sabbath', '1987');
 addToCollection('Past Lives', 'Black Sabbath', '2002');
 addToCollection('Songs About Jane', 'Maroon 5', '2002');
 addToCollection('Abbey Road', 'The Beatles', '1969');
-addToCollection('Nevermond', 'Nirvana', '1969');
+addToCollection('Nevermind', 'Nirvana', '1969');
 addToCollection(`Sgt. Pepper's Lonely Hearts Club Band`, 'The Beatles', '1967');
 console.log(collection);
 
@@ -56,4 +56,9 @@ function findByArtist(artist) {
 }//End findByArtist
 
 //Testing findByArtist
+console.log(`These albums are by The Beatles`);
 console.log(findByArtist('The Beatles'));
+console.log(`These albums are by Black Sabbath`);
+console.log(findByArtist('Black Sabbath'));
+console.log(`These albums are by Nirvana`);
+console.log(findByArtist('Nirvana'));
