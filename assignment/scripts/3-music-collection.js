@@ -13,7 +13,22 @@ function addToCollection (title, artist, yearPublished) {
   }//end object
   collection.push(album);
   console.log(`${title} was added to collection.`);
-  return title;
+  return album;
 
 }//end addToCollection
-addToCollection('Eternol Idol', 'Black Sabbath', '1987');
+addToCollection('The Eternol Idol', 'Black Sabbath', '1987');
+addToCollection('Past Lives', 'Black Sabbath', '2002');
+console.log(collection);
+
+//a function to take any array and first show the number of items in the array
+// and then list the informaiton in each index of the array
+
+function showCollection(array) {
+  console.log(array.length);
+  for(let index of array) {
+    console.log(`${index.title} by ${index.artist}, published in ${index.yearPublished})
+  }//end for
+  return true;
+}//end showCollection
+
+console.log(showCollection(collection));
