@@ -69,6 +69,7 @@ console.log(findByArtist('Blink 182'));
 // a function to take in an object with artist and yearPublished parameters
 // then return an array containing all albums that meet both criteria.
 // the function should return an empty array if the search items are not in the collection
+// the function should return collection if the input in null or has null values
 
 'still need to add what to do if empty or no object'
 
@@ -97,6 +98,7 @@ console.log('Testing an object with Black Sabbath and 1988');
 console.log(search({artist:'Black Sabbath', yearPublished:'1988'}));
 console.log('Testing a null input, should return collection');
 console.log(search());
+console.log(search({}));
 console.log('Testing input objects with null values, should return collection');
 console.log(search({artist: null, yearPublished: null}));
 console.log(search({artist:'The Beatles', yearPublished: null}));
