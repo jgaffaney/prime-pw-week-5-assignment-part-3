@@ -24,9 +24,9 @@ console.log(collection);
 // and then list the informaiton in each index of the array
 
 function showCollection(array) {
-  console.log(array.length);
+  console.log(`This collection has ${array.length} items.`);
   for(let index of array) {
-    console.log(`${index.title} by ${index.artist}, published in ${index.yearPublished})
+    console.log(`${index.title} by ${index.artist}, published in ${index.yearPublished}`)
   }//end for
   return true;
 }//end showCollection
