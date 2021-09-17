@@ -74,7 +74,9 @@ console.log(findByArtist('Blink 182'));
 
 function search(searchObject) {
   let searchResults = [];
-  if(searchObject == null || searchObject.artist === null && searchObject.yearPublished == null) {
+  if(searchObject == null) {
+    return collection;
+  } else if (searchObject.artist == null || searchObject.yearPublished == null) {
     return collection;
   } else {
       for(let album of collection) {
@@ -95,5 +97,7 @@ console.log('Testing an object with Black Sabbath and 1988');
 console.log(search({artist:'Black Sabbath', yearPublished:'1988'}));
 console.log('Testing a null input, should return collection');
 console.log(search());
-console.log('Testing input object with null values, should return collection');
-console.log(search({artist:null, yearPublished:null}));
+console.log('Testing input objects with null values, should return collection');
+console.log(search({artist: null, yearPublished: null}));
+console.log(search({artist:'The Beatles', yearPublished: null}));
+console.log(search({artist: null, yearPublished: '1967'}));
