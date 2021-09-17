@@ -62,3 +62,24 @@ console.log(`These albums are by Black Sabbath`);
 console.log(findByArtist('Black Sabbath'));
 console.log(`These albums are by Nirvana`);
 console.log(findByArtist('Nirvana'));
+console.log(`These albums are by Blink 182 (this should be an empty array)`);
+console.log(findByArtist('Blink 182'));
+
+
+// a function to take in an object with artist and yearPublished parameters
+// then return an array containing all albums that meet both criteria.
+// the function should return an empty array if the search items are not in the collection
+
+function search(searchObject) {
+  let searchResults = [];
+  for(let album of collection) {
+    if(searchObject.artist === album.artist && searchObject.yearPublished === album.yearPublished) {
+      searchResults.push(album);
+    } //end if
+  }// end for loop
+  return searchResults;
+}//end search()
+console.log('Testing an object with Black Sabbath and 1987');
+console.log(search({artist:'Black Sabbath', yearPublished:'1987'}));
+console.log('Testing an object with Black Sabbath and 1988');
+console.log(search({artist:'Black Sabbath', yearPublished:'1988'}));
