@@ -83,12 +83,12 @@ console.log(collection);
 function showCollection(array) {
   console.log(`This collection has ${array.length} items.`);
   for(let album of array) {
-    //console.log(`in first for loop ${album}`);
+    //console.log(`in first for loop ${album}`); //for testing only
     console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`)
     let j = 1;
     for(let song of album.tracks) {
       let number = j;
-      //console.log(`in second for loop ${song.tracks}`);
+      //console.log(`in second for loop ${song.tracks}`); //for testing only
       console.log(`${number}. ${song.title}: ${song.duration}`);
       j++;
     }//end for #2
@@ -133,17 +133,18 @@ console.log(findByArtist('Blink 182'));
 
 function search(searchObject, trackName) {
   let searchResults = [];
-  if(searchObject !== null || trackName !== null) {
+  if(searchObject == null && trackName == null) {
     return collection;
-  } else if (searchObject.artist == null || searchObject.yearPublished == null) {
+  } else if ((searchObject.artist == null || searchObject.yearPublished == null) && trackName == null) {
     return collection;
   } else {
       for(let album of collection) {
         if(searchObject.artist === album.artist && searchObject.yearPublished === album.yearPublished) {
           searchResults.push(album);
         } //end if
-        for(let track of album.title) {
-          if(track === trackName) {
+        for(let track of album.tracks) {
+          //console.log('in second for loop in search');//for testing only
+          if(track.title === trackName) {
             searchResults.push(album);
           }//end if
       }// end for loop
@@ -163,9 +164,11 @@ console.log(search({artist:'Black Sabbath', yearPublished:'1988'}));
 console.log('Testing a null input, should return collection');
 console.log(search());
 console.log(search({}));
-console.log('Testing input objects with null values, should return collection');
+console.log('Testing input objects with null values and no track title, should return collection');
 console.log(search({artist: null, yearPublished: null}));
 console.log(search({artist:'The Beatles', yearPublished: null}));
 console.log(search({artist: null, yearPublished: '1967'}));
+console.log('Testing search with null object input, track name of Shiver');
 console.log(search({}, 'Shiver'));
-console.log(showCollection(collection));
+console.log('Testing search with null object input, track name of Megalomania');
+console.log(search({}, 'Megalomania'));
