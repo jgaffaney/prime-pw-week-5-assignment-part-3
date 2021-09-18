@@ -122,9 +122,8 @@ console.log(findByArtist('Blink 182'));
 // the function should return an empty array if the search items are not in the collection
 // the function should return collection if the input in null or has null values
 
-'still need to add what to do if empty or no object'
 
-function search(searchObject) {
+function search(searchObject, trackName) {
   let searchResults = [];
   if(searchObject == null) {
     return collection;
@@ -135,8 +134,12 @@ function search(searchObject) {
         if(searchObject.artist === album.artist && searchObject.yearPublished === album.yearPublished) {
           searchResults.push(album);
         } //end if
+        if(album.tracks.title === trackName) {
+          searchResults.push(album);
+        }//end if
       }// end for loop
     } // end else
+
     return searchResults;
 }//end search()
 
