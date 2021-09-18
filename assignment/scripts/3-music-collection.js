@@ -2,6 +2,7 @@ console.log('***** Music Collection *****')
 
 let collection = [];
 
+
 //a function to accept the artist, title, and yearpublished
 //then create and object with those properties and add it to the Collection
 
@@ -103,3 +104,55 @@ console.log('Testing input objects with null values, should return collection');
 console.log(search({artist: null, yearPublished: null}));
 console.log(search({artist:'The Beatles', yearPublished: null}));
 console.log(search({artist: null, yearPublished: '1967'}));
+
+
+
+//Track Arrays
+let eternolIdol = [{title: 'The Shining', duration: '6:00'}, {title: 'Ancient Warrior', duration: '5:28'},
+{title: 'Hard Life to Love', duration: '5:00'}, {title: 'Glory Ride', duration: '4:49'},
+{title: 'Born to Lose', duration: '3:43'}, {title: 'Nightmare', duration: '5:19'},
+{title: 'Scarlet Pimpernel', duration: '2:05'}, {title: 'Lost Forever', duration: '4:43'},
+{title: 'Eternal Idol', duration: '6:33'}];
+
+let pastLives = [{title: `Tomorrow's Dream`, duration: '3:03'}, {title: 'Sweet Leaf', duration: '5:26'},
+{title: 'Killing Yourself to Live', duration: '5:29'}, {title: 'Cornucopia', duration: '3:57'},
+{title: 'Snowblind', duration: '4:46'}, {title: 'Embryo', duration: '4:33'},
+{title: 'War Pigs', duration: '7:36'}, {title: 'Wicked World', duration: '18:55'},
+{title: 'Paranoid', duration: '3:14'}, {title: 'Hand of Doom', duration: '8:25'},
+{title: 'Hole in the Sky', duration: '4:46'}, {title: 'Symptom of the Universe', duration: '4:52'},
+{title: 'Megalomania', duration: '9:53'}, {title: 'Iron Man', duration: '6:25'},
+{title: 'Black Sabbath', duration: '8:23'}, {title: 'N.I.B', duration: '5:31'},
+{title: 'Behind the Wall of Sleep', duration: '5:03'}, {title: 'Fairies Wear Boots', duration: '6:39'}];
+
+let songsAboutJane = [{title: 'Harder to Breathe', duration: '2:53'}, {title: 'This Love', duration: '3:26'},
+{title: 'Shiver', duration: '2:59'}, {title: 'She Will Be Loved', duration: '4:17'},
+{title: 'Tangled', duration:'3:18'}, {title: 'The Sun', duration: '4:11'},
+{title: 'Must Get Out', duration: '3:59'}, {title: 'Sunday Morning', duration: '4:04'},
+{title: 'Secret', duration: '4:55'}, {title: 'Through with You', duration: '3:01'},
+{title: 'Not Coming Home', duration: '4:21'}, {title: 'Sweetest Goodbye', duration: '4:30'}];
+
+let abbeyRoad =[{title: 'Come Together', duration: '4:19'}, {title: 'Something', duration: '3:02'},
+ {title: `Maxwell's Silver Hammer`, duration: '3:27'}, {title: 'Oh! Darling', duration: '3:27'},
+ {title: `Octopus's Garden`, duration: '2:51'}, {title: 'I Want You', duration: '7:47'},
+ {title: 'Here Comes the Sun', duration: '3:05'}, {title: 'Because', duration: '2:45'},
+ {title: 'You Never Give Me Your Money', duration: '4:03'}, {title: 'Sun King', duration: '2:26'},
+ {title: 'Mean Mr. Mustard', duration: '1:06'}, {title: 'Polythene Pam', duration: '1:13'},
+ {title: 'She Came In Through the Bathroom Window', duration: '1:58'}, {title: 'Golden Slumbers', duration: '1:31'},
+ {title: 'Carry That Weight', duration: '1:36'}, {title: 'The End', duration: '2:05'},
+ {title: 'Her Majesty', duration: '0:23'}];
+
+let nevermind = [{title: 'Smells Like Teen Spirit', duration: '5:01'}, {title: 'n Bloom', duration: '4:14'},
+{title: 'Come as You Are', duration: '3:39'}, {title: 'Breed', duration: '3:03'},
+{title: 'Lithium', duration: '4:17'}, {title: 'Polly', duration: '2:57'},
+{title: 'Territorial Pissings', duration: '2:22'}, {title: 'Drain You', duration: '3:43'},
+{title: 'Lounge Act', duration: '2:36'}, {title: 'Stay Away', duration: '3:32'},
+{title: 'On a Plain', duration: '3:16'}, {title: 'omething in the Way', duration: '3:52'},
+{title: 'Endless, Nameless', duration: '6:43'}];
+
+let sgtPeppers = [{title: `Sgt. Pepper's Lonely Hearts Club Band`, duration: '2:00'}, {title: 'With a Little Help from My Friends', duration: '2:42'},
+{title: 'Lucy in the Sky with Diamonds', duration: '3:28'}, {title: 'Getting Better', duration: '2:48'},
+{title: 'Fixing a Hole', duration: '2:36'}, {title: `She's Leaving Home`, duration: '3:25'},
+{title: 'Being for the Benefit of Mr. Kite!', duration: '2:37'}, {title: 'Within You Without You', duration: '5:05'},
+{title: `When I'm Sixty-Four`, duration: '2:37'}, {title: 'Lovely Rita', duration: '2:42'},
+{title: 'Good Morning Good Morning', duration: '2:42'}, {title: `Sgt. Pepper's Lonely Hearts Club Band (Reprise)`, duration: '1:18'},
+{title: 'A Day in the Life', duration: '5:38'}];
