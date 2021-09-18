@@ -82,8 +82,16 @@ console.log(collection);
 
 function showCollection(array) {
   console.log(`This collection has ${array.length} items.`);
-  for(let index of array) {
-    console.log(`${index.title} by ${index.artist}, published in ${index.yearPublished}`)
+  for(let album of array) {
+    //console.log(`in first for loop ${album}`);
+    console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`)
+    let j = 1;
+    for(let song of album.tracks) {
+      let number = j;
+      //console.log(`in second for loop ${song.tracks}`);
+      console.log(`${number}. ${song.title}: ${song.duration}`);
+      j++;
+    }//end for #2
   }//end for
   return true;
 }//end showCollection
@@ -125,7 +133,7 @@ console.log(findByArtist('Blink 182'));
 
 function search(searchObject, trackName) {
   let searchResults = [];
-  if(searchObject == null) {
+  if(searchObject !== null || trackName !== null) {
     return collection;
   } else if (searchObject.artist == null || searchObject.yearPublished == null) {
     return collection;
@@ -134,10 +142,12 @@ function search(searchObject, trackName) {
         if(searchObject.artist === album.artist && searchObject.yearPublished === album.yearPublished) {
           searchResults.push(album);
         } //end if
-        if(album.tracks.title === trackName) {
-          searchResults.push(album);
-        }//end if
+        for(let track of album.title) {
+          if(track === trackName) {
+            searchResults.push(album);
+          }//end if
       }// end for loop
+      }//end for
     } // end else
 
     return searchResults;
@@ -157,3 +167,5 @@ console.log('Testing input objects with null values, should return collection');
 console.log(search({artist: null, yearPublished: null}));
 console.log(search({artist:'The Beatles', yearPublished: null}));
 console.log(search({artist: null, yearPublished: '1967'}));
+console.log(search({}, 'Shiver'));
+console.log(showCollection(collection));
