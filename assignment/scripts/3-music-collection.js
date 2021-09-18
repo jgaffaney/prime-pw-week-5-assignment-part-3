@@ -70,11 +70,11 @@ function addToCollection (title, artist, yearPublished, trackArray) {
 
 //Testing - Adding multiple album and then loggin the collection
 addToCollection('The Eternol Idol', 'Black Sabbath', '1987', eternolIdol);
-addToCollection('Past Lives', 'Black Sabbath', '2002');
-addToCollection('Songs About Jane', 'Maroon 5', '2002');
-addToCollection('Abbey Road', 'The Beatles', '1969');
-addToCollection('Nevermind', 'Nirvana', '1969');
-addToCollection(`Sgt. Pepper's Lonely Hearts Club Band`, 'The Beatles', '1967');
+addToCollection('Past Lives', 'Black Sabbath', '2002', pastLives);
+addToCollection('Songs About Jane', 'Maroon 5', '2002', songsAboutJane);
+addToCollection('Abbey Road', 'The Beatles', '1969', abbeyRoad);
+addToCollection('Nevermind', 'Nirvana', '1969', nevermind);
+addToCollection(`Sgt. Pepper's Lonely Hearts Club Band`, 'The Beatles', '1967', sgtPeppers);
 console.log(collection);
 
 //a function to take any array and first show the number of items in the array
