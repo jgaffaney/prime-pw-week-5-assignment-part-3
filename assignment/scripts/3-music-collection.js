@@ -168,7 +168,9 @@ console.log('Testing input objects with null values and no track title, should r
 console.log(search({artist: null, yearPublished: null}));
 console.log(search({artist:'The Beatles', yearPublished: null}));
 console.log(search({artist: null, yearPublished: '1967'}));
-console.log('Testing search with null object input, track name of Shiver');
+console.log('Testing search with null searchObject input, track name of Shiver. Should return Songs About Jane album object');
 console.log(search({}, 'Shiver'));
-console.log('Testing search with null object input, track name of Megalomania');
+console.log('Testing search with null searchObject input, track name of Megalomania. Should return Past Lives album object');
 console.log(search({}, 'Megalomania'));
+console.log('Testing search with null searchObject input and track name not in collection');
+console.log(search({}, 'This song is not in the colleciton. Should return empty array'));
